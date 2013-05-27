@@ -1,0 +1,11 @@
+= simple_form_for(@notebook) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+
+  .form-inputs
+    = f.input :access, :collection => [['open', 'Open: Everyone can read and add notes to this notebook'], ['closed', 'Closed: Everyone can read this notebook, only you can add notes'], ['invite-only', 'Invite-Only: Only those you invite will have access to this notebook']], :label_method=>:last, :value_method=>:first, :as=>:radio
+
+  .form-actions
+    = f.button :submit

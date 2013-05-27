@@ -1,0 +1,41 @@
+%p#notice= notice
+
+%p
+	%b Title:
+	= @notebook.title
+%p
+= @notebook.access
+
+%p
+	%b Notes:
+	- @notebook.notes.reverse.each do |ff|
+		%hr
+		%div.row
+			%div.span2
+				= ff.created_at.strftime("%b %d, %Y")
+				%p
+				= ff.comments.count
+				- if ff.comments.count == 1
+					Comment
+				- else
+					Comments
+			%div.span7
+				
+				%div{:style=>"text-decoration:underline"}
+					= link_to ff.title, notebook_note_path(@notebook, ff)
+
+				= first_x_words(ff.content, 20, '...')
+
+	
+%hr
+%p
+- if user_signed_in?
+	- if current_user.admin? || @notebook.user_id == current_user.id || @notebook.access == 'open'
+		= link_to 'New Note', new_notebook_note_path(@notebook)
+
+
+%p
+- if can? :edit, @notebook
+	= link_to 'Edit', edit_notebook_path(@notebook)
+	\|
+= link_to 'Back', notebooks_path

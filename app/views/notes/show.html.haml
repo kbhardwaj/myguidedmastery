@@ -1,0 +1,30 @@
+- require 'rails_autolink'
+= @notebook.title
+%p
+%div.paratitle= @note.title
+%p
+%div.paragraph= auto_link(simple_format(@note.content), :html => { :target => '_blank' })
+
+%p
+%div.navlinks
+	%hr
+	- if can? :edit, @note
+		= link_to "Edit Note", edit_notebook_note_path(@notebook, @note)
+	- if can? :destroy, @note
+		/|
+		= link_to "Delete Note", [@notebook, @note], :method => :delete, :data => { :confirm => 'Are you sure?' }
+	%p
+	= link_to "Back to Notes", notebook_path(@notebook)
+
+%p
+%h2 Comments
+- if !user_signed_in?
+	= link_to "Sign in", new_user_session_path
+	to leave a comment.
+%p
+- if can? :create, Comment
+	#create_comment
+		= render 'comments/form'
+
+#show_comment
+	= render @note.comments

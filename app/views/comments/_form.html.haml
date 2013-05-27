@@ -1,0 +1,8 @@
+= simple_form_for [@notebook, @note, @note.comments.build] do |f|
+  
+
+  
+  = f.input :content, :input_html => {:rows=>1,:cols=>40}
+
+  
+  = f.button :submit

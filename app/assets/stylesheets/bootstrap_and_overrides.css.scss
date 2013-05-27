@@ -1,0 +1,47 @@
+@import "bootstrap";
+
+@import "bootstrap-responsive";
+
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+.container {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+.paragraph{
+  padding-top:20px;
+  font-size:24px;
+  line-height:36px;
+  text-align:left;
+}
+.paratitle{
+  padding-top:40px;
+  font-size:30px;
+  line-height:25px;
+  color:#BB3825;
+}
+
+.footer {
+  background-color:black;
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+} 
+
+.thumbnail{
+  height:150px;
+  background-color:lightgray;
+}
+
+.navlinks{
+  padding-top:20px
+}
+
