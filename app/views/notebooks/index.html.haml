@@ -1,28 +1,37 @@
 %h1.paratitle Notebooks
 %hr
 
-/ %table
-/   %tr
-/     %th Title
-/     %th
-/     %th
-/     %th
+
 
 %ul.thumbnails
-  - @notebooks.each do |notebook|
-    %li.span2
-      %a.thumbnail{:href=> notebook_path(notebook)}
-        %div= notebook.title
-        %i{:class=>"icon-book-1", :style=>"font-size:120px"}
+	- @notebooks.each do |notebook|
+		%li.span2
+			- if notebook.access == "closed"
+				%a.thumbnail{:href=> notebook_path(notebook), :style=>"background-color:lightblue"}
+					%div{:style=>"text-align:center; color:#BB3825"}= notebook.title
+					%i{:class=>"icon-book-1", :style=>"font-size:120px"}
+			- elsif notebook.access == "open"
+				%a.thumbnail{:href=> notebook_path(notebook), :style=>"background-color:lightblue"}
+					%div{:style=>"text-align:center; color:#BB3825"}= notebook.title
+					%i{:class=>"icon-book-1", :style=>"font-size:120px"}
+			- elsif notebook.access == "invite-only"
+				%a.thumbnail{:href=> notebook_path(notebook), :style=>"background-color:lightblue"}
+					%div{:style=>"text-align:center; color:#BB3825"}= notebook.title
+					%i{:class=>"icon-book-1", :style=>"font-size:120px"}
+			- else
+				%a.thumbnail{:href=> notebook_path(notebook), :style=>"background-color:lightblue"}
+					%div{:style=>"text-align:center; color:#BB3825"}= notebook.title
+					%i{:class=>"icon-book-1", :style=>"font-size:120px"}
+	
+			- if can? :edit, Notebook
+				%div{:style=>"text-align:center"}
+					= link_to 'Edit', edit_notebook_path(notebook)
+					\|
+					= link_to 'Destroy', notebook, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-        
-        
-      - if can? :edit, Notebook
-        %div= link_to 'Edit', edit_notebook_path(notebook)
-        %div= link_to 'Destroy', notebook, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 - if can? :create, Notebook
-  = link_to 'New Notebook', new_notebook_path
+	= link_to 'New Notebook', new_notebook_path
 
 

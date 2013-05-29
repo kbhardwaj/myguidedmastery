@@ -1,5 +1,5 @@
 
-%div.span7
+.span7
 	%div.commenttext
 		- if !comment.user.blank?
 			%div.row
@@ -12,5 +12,4 @@
 		- if user_signed_in?
 			- if comment.user_id==current_user.id
 				= link_to 'Destroy Comment', [@notebook, comment.note, comment],:confirm => 'Are you sure?',:method => :delete
-	%br/ 
     
