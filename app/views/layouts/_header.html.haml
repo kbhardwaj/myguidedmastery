@@ -1,17 +1,23 @@
 %div{:class => "navbar navbar-inverse"}
 	%div.navbar-inner
-		%a.brand{:href=>"#{root_path}"} My Guided Mastery
-		%ul.nav
-			%li
-				= link_to "About", about_path
+		%div.container
+			%a{:class=>"btn btn-navbar", "data-toggle"=>"collapse", "data-target"=>".nav-collapse"}
+				%span{:class=>"icon-bar"}
+				%span{:class=>"icon-bar"}
+				%span{:class=>"icon-bar"}
+			%a.brand{:href=>"#{root_path}"} My Guided Mastery
+			%div{:class=>"nav-collapse collapse"}
+				%ul.nav
+					%li
+						= link_to "About", about_path
 
-		%ul{:class => "nav pull-right"}
-			
-			- if user_signed_in?
-				%li= link_to "Discover", "#"
-				%li= link_to "Logout", destroy_user_session_path, :method => :delete
-			- else
-				%li= link_to "Login", new_user_session_path
+				%ul{:class => "nav pull-right"}
+					
+					- if user_signed_in?
+						%li= link_to "Discover", "#"
+						%li= link_to "Logout", destroy_user_session_path, :method => :delete
+					- else
+						%li= link_to "Login", new_user_session_path
 				
 
 		
