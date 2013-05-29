@@ -1,4 +1,7 @@
 %p
 My Guided Mastery is where I share what I'm learning with you.
 %p
-= link_to "Sign Up", new_user_registration_path
+- if !user_signed_in?
+	= link_to "Sign Up", new_user_registration_path
+- else
+	= link_to "Notebooks", notebooks_path

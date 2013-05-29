@@ -11,7 +11,7 @@ html, body {
 }
 
 .container {
-  overflow:auto;
+  overflow:hidden;
   
 }
 .paragraph{
@@ -30,7 +30,7 @@ html, body {
 .footer {
   background-color:black;
   position: relative;
-  margin-top: -150px; /* negative value of footer height */
+  margin-top: 50px; /* negative value of footer height */
   height: 150px;
   clear:both;
   padding-top:20px;
@@ -45,3 +45,7 @@ html, body {
   padding-top:20px
 }
 
+.commenttext{
+  background: white;
+  border: 2px solid lightblue;
+}

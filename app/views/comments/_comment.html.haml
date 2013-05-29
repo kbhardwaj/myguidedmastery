@@ -1,12 +1,16 @@
 
-
-%p.commenttext
-  - if !comment.user.blank?
-    = comment.user.name + ":"
-    = comment.content
-    %br 
-    - if user_signed_in?
-      - if comment.user_id==current_user.id
-        = link_to 'Destroy Comment', [@notebook, comment.note, comment],:confirm => 'Are you sure?',:method => :delete
-        %br/ 
-    = comment.created_at.strftime("%b %d, %Y")
+%div.span7
+	%div.commenttext
+		- if !comment.user.blank?
+			%div.row
+				%div.span2{:style=>"padding-left:5px"}
+					= comment.user.name + ":"
+					%p= comment.created_at.strftime("%b %d, %Y")
+				%div.span4
+					= auto_link(simple_format(comment.content), :html => { :target => '_blank' })
+			
+		- if user_signed_in?
+			- if comment.user_id==current_user.id
+				= link_to 'Destroy Comment', [@notebook, comment.note, comment],:confirm => 'Are you sure?',:method => :delete
+	%br/ 
+    

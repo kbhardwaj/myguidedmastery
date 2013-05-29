@@ -11,7 +11,7 @@
 	- if can? :edit, @note
 		= link_to "Edit Note", edit_notebook_note_path(@notebook, @note)
 	- if can? :destroy, @note
-		/|
+		\|
 		= link_to "Delete Note", [@notebook, @note], :method => :delete, :data => { :confirm => 'Are you sure?' }
 	%p
 	= link_to "Back to Notes", notebook_path(@notebook)
