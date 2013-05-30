@@ -61,6 +61,7 @@ Myguidedmastery::Application.routes.draw do
   
   match '/contact', to: 'pages#contact'
   match '/about', to: 'pages#about'
+  match '/prototype-guide', to: 'pages#prototype-guide'
 
   # See how all your routes lay out with "rake routes"
 
