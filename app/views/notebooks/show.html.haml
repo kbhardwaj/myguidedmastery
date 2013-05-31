@@ -8,7 +8,7 @@
 
 %p
 	%b Notes:
-	- @notebook.notes.reverse.each do |ff|
+	- @notes.reverse.each do |ff|
 		%hr
 		%div.row
 			%div.span2
@@ -25,6 +25,11 @@
 					= link_to ff.title, notebook_note_path(@notebook, ff)
 
 				= first_x_words(ff.content, 20, '...')
+				%p
+					%b= raw "Tags: #{ ff.tag_list.map {|t| link_to t, notebook_tag_path(@notebook, t) }.join(', ')}" 
+					
+			%div.span1
+				= pluralize ff.reputation_for(:votes).to_i, "vote"
 
 	
 %hr

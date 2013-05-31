@@ -40,5 +40,12 @@ class NotesController < ApplicationController
 		@note.destroy
 		respond_with(@notebook, :location => notebook_path(@notebook))
 	end
+	def vote
+		value = params[:type] == "up" ? 1 : -1
+		@notebook = Notebook.find(params[:notebook_id])
+		@note = @notebook.notes.find(params[:id])
+		@note.add_or_update_evaluation(:votes, value, current_user)
+		redirect_to :back, notice: "Thanks for voting!"
+	end
 	
 end

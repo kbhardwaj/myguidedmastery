@@ -14,7 +14,13 @@ class NotebooksController < ApplicationController
   # GET /notebooks/1
   # GET /notebooks/1.json
   def show
-    @notebook = Notebook.find(params[:id])
+    if params[:tag]
+      @notebook = Notebook.find(params[:notebook_id])
+      @notes = @notebook.notes.tagged_with(params[:tag])
+    else
+      @notebook = Notebook.find(params[:id])
+      @notes = @notebook.notes.all
+    end
 
     respond_to do |format|
       format.html # show.html.erb

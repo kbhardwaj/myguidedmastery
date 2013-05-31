@@ -15,7 +15,7 @@ class Ability
             can :update, Note, :user_id => user.id # If the user owns the note, he or she can update the note
             can :destroy, Note, :user_id => user.id
             can :create, Note, :notebook => {:access => "open"} #If the notebook is 'open', any signed in user can add a note to it.
-            
+            can :vote, Note
             # can :create, :notes do |note|
             #     note.notebook.access == 'open'
             # end

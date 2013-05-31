@@ -1,8 +1,16 @@
 - require 'rails_autolink'
 = @notebook.title
 %p
-%div.paratitle= @note.title
+%div{:display=>"table"}
+	%div{:style=>"float:left", :class=>"paratitle"}= @note.title
+	%div{:style=>"text-align:right"}
+		= pluralize @note.reputation_for(:votes).to_i, "vote"
+		%p
+		= link_to "up", vote_notebook_note_path(@notebook, @note, type: "up"), method: "post"
+		\| 
+		= link_to "down", vote_notebook_note_path(@notebook, @note, type: "down"), method: "post"
 %p
+
 %div.paragraph= auto_link(simple_format(@note.content), :html => { :target => '_blank' })
 
 %p

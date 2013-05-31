@@ -1,10 +1,12 @@
 Myguidedmastery::Application.routes.draw do
   resources :notebooks do
+    get '/tags/:tag' => 'notebooks#show', :as => :tag
     resources :notes do
+      member { post :vote }
       resources :comments
     end
   end
-
+   #makes a single route that takes a :tag argument and maps to notebooks show page
 
   devise_for :users
 
