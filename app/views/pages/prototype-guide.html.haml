@@ -28,12 +28,12 @@
 			%div
 				3. The Product
 			
-			Something Customers Want - This is important
+				Something Customers Want This is important
 			%p
 			%div
 				4. The Runway
 			
-			Don't spend your money - This is important
+				Don't spend your money This is important
 			%p
 			%hr
 			%p
@@ -117,52 +117,461 @@
 			%div.paratitle
 				Product Management
 			The first thing to do after vetting an idea, validating assumptions and discussing with potential customers is to start designing the user interface. And when I say designing, I don’t mean anything technical at all; I’m talking about a pencil and a piece of paper. An idea is always amazing in your head, but it’s always a little blurry, slightly undefined, unrefined.Where do you start? If you start arbitrarily you’re going to have a nightmare project on your hands.
+		
+		%p
+		Start with the most obvious necessities of your website and write from the point of view of the user:
+		%div{:class=>"row", :style=>"font-size:20px"}
+			%div.span10.offset1 
+		
+				%p
+				“As a new user I want to sign up on the website so that I can access its features.”
+				%p
+				“As a new member of the site I want to host an event so that I can invite friends and collect payment.”
+				%p
+				“As an event host I want to invite guests so that they can RSVP.”
+				%p
+				“As an event host I want to send my guests invite emails, asking them to RSVP.”
+				%p
+				“As an event host I want to tie my event to a payment platform so that I can receive payments securely.”
+				%p
+				“As an event host I want to be able to set event details (date, time, location) so that my guests are aware.”
+				%p
+				“As an invitee I want to sign up through the email link so that I can RSVP.”
+				%p
+				“As a new member and invitee I want to RSVP and make payment so that I can come to the event.”
+				%p
+				“As an event host I want to see my list of RSVPs.”
 
-			 
-
-			Start with the most obvious necessities of your website and write from the point of view of the user:
-
-			“As a new user I want to sign up on the website so that I can access its features.”
-
-			“As a new member of the site I want to host an event so that I can invite friends and collect payment.”
-
-			“As an event host I want to invite guests so that they can RSVP.”
-
-			“As an event host I want to send my guests invite emails, asking them to RSVP.”
-
-			“As an event host I want to tie my event to a payment platform so that I can receive payments securely.”
-
-			“As an event host I want to be able to set event details (date, time, location) so that my guests are aware.”
-
-			“As an invitee I want to sign up through the email link so that I can RSVP.”
-
-			“As a new member and invitee I want to RSVP and make payment so that I can come to the event.”
-
-			“As an event host I want to see my list of RSVPs.”
-
-			 
-
+		%p 
+		%p
+		%div	
 			What is described above is the most important functionality of my website. That is the minimally viable product. Without this functionality I don’t have a product, and if I add absolutely nothing else to it, I still have a product. This is what I need to produce first. But we still don’t start coding, we’re not even going to the computer yet. What does this look like? There are so many different ways to create this: In order to create an event, a new member could be lead through a series of event creation screens. This functionality is pretty common in a lot of online processes. Or maybe the new member would be lead directly to the final screen where he or she could edit by clicking various parts and bringing up popups. Don’t get caught up in the details of each, but try and understand that you can’t just go and start “coding”. Draw the thing first. Preferably on pieces of paper that you can crumple up and toss in wastebaskets. Frank Lloyd Wright once said, "You can use an eraser on the drafting table or a sledge hammer on the construction site."
 
 			 
-			When I begin coding I stop thinking about what functionality is useful and get into "make it work" mode. I'll spend a few hours making something work before I realize, maybe it wasn't that useful, or maybe it could have been accomplished in a simpler way. That's why it's better to think through the details before you begin coding.
+			When you begin coding, it's hard to stop and think about what functionality is useful and what might be unnecessary. You just get into "make it work" mode. I'll spend a few hours making something work before I realize, maybe it wasn't that useful, or maybe it could have been accomplished in a simpler way. That's why it's better to think through the details before you begin coding.
 			That’s what happens when you start coding. It’s pretty much inevitable. So what you need to do is take in the forest from afar. Study it. Get a good look at it and understand the big picture. What does your customer want to be able to do? What helps him or her do it best or fastest? What is necessary and what is uneccesary?
 
 			 
 
 			When you get the screens down on paper you can start to get a feel for how your customers will use it.
 
-			Mockups - Designing/Mockups/wireframing - balsamiq, free options, pen and paper
+			Mockups Designing/Mockups/wireframing balsamiq, free options, pen and paper
 		%p
 		%hr
 		%p
 		%div
 			%div.paratitle
-				Time for a Decision
-			You have a decision here based on a few things. The decision is, will you build the working prototype yourself or will you outsource it? There is not a right or wrong answer to this decision, there are just a few things to consider. 
+				Startup Engineering – Web Development
+
+			This is the part I’m most excited about. This is pretty much a separate guide in itself, but I want to include it here because even if you want to skip this right now for whatever number of valid reasons, you might want to come back in the future. Knowing the ins and outs of the technical side of things is important for everyone in the web space, even the non-technical cofounder. And trust me, you get a lot more credibility from the top technical guys when you’ve shown you can get your hands dirty as well.
+			%p
+			%p{:style=>"text-decoration:underline"}
+
+				Major Components:
+			%p
+			Servers:
+			%p
+			Web Servers:
+			%p
+			Web Frameworks:
+			%p
+			Backend:
+			%p
+			Frontend:
+		%p
+		%hr
+		%p
+		%div
+			<h2>Developing a web application with Ruby on Rails:</h2>
+			%p
+			Explain the different parts of the app folder. It's like an engine.
+			%p
+			Explain what the Rails framework is, and why it's amazing.
+			%p
+			MVC Framework:
+			Model
+			View
+			Controller
+			%p
+			Add Version Control
+			$ git config --global user.name "Kaustubh Bhardwaj"
+			$ git config --global user.email "kaustubh.bhardwaj86@gmail.com"
+			$ git init
+			$ ls -a
+			$ git status
+			vi .gitignore
+			$ git add .
+			$ git commit -m "initial commit"
+			$ git remote add origin git@github.com:kbhardwaj/myguidedmastery.git
+			$ git push -u origin master
+			Generating ssh keys: https://help.github.com/articles/generating-ssh-keys
+			Go to 'Account Settings' in the top right of your github, >> SSH keys >> 'Generating SSH Keys' and follow the directions
+			$ cd ~/.ssh # Checks to see if there is a directory called .ssh in your user directory
+			The directions there are pretty good so I won't confuse you by going over them again here. Leave a message if you're having trouble.
+			%p
+			Heroku
+			create an account with Heroku
+			install Heroku Command Line Tools (CLI) / Heroku Toolbelt: https://toolbelt.heroku.com/
+			$ heroku keys:add
+			$ heroku create
+			This creates a heroku app with a beautiful, randomly generated domain name. Mine is called infinte-dusk-5040. Don't worry, you can change that later.
+			$ git push heroku master
+			this will install your application on to Heroku's cloud servers. You'll see all your gems installing and then you'll see your assets 'precompiling'
+			I get an error that says 'rake aborted!' & 'Could not connect to server: Connection refused'
+			Heroku will not use sqlite gem. It will use postgres, so we need to differentiate between the development and production modes of our application. In development we will use the sqlite gem and in production we will use the pg gem.
+			group :development do
+			gem 'sqlite3'
+			end
+			group :production do
+			gem 'pg'
+			end
+			Technically we should always use the same database in development that we use in production.
+			So follow these steps to install postgres
+			Here is a great railscast: http://railscasts.com/episodes/342-migrating-to-postgresql?view=asciicast
+			%p
+			Postgres:
+			install it: http://railscasts.com/episodes/342-migrating-to-postgresql?view=asciicast
+			rake db:create:all
+			taps pull postgres %- if you already created a db in sqlite. The best thing to do is to create your app with postgres (gem 'pg') in the very beginning. This will save you trouble later.
+			heroku db:push %- also only necessary after the taps command if you are trying to migrate an sqlite database to your new postgres database.
+			git push heroku master
+			potential error: rake aborted! 
+			could not connect to server: Connection refused
+			this is an error that occurs on rails 3.2 and the solution is discussed here: http://www.simonecarletti.com/blog/2012/02/heroku-and-rails-3-2-assetprecompile-error/
+			changes made to the rails 3.2 initialization process require a line to be added to application.rb found in the config folder.
+			%p       add this line: config.assets.initialize_on_precompile = false
+			%p
+			Add to Heroku
+			%p
+			Add Haml
+			%p
+			Add Pages
+			%p
+			1. $ rails generate controller Pages
+			%p
+			2. add home routes
+			In the routes.rb file add this line or find the commented line that starts with "root :to" 
+			root :to => 'pages#home'
+			rm public/index
+			%p
+			3. Add haml to your rails application by adding these two lines to the bottom of your gemfile.
+			gem "haml-rails", ">= 0.4"
+			gem "html2haml", ">= 1.0.1", :group => :development
+			bundle install
+			Explain what haml is.
+			Explain what the gemfile does
+			Explain the bundler
+			%p
+			3. edit application.html.haml
+			render 'layouts/header'
+			render 'layouts/footer'
+			use html2haml to convert application.html.erb to application.html.haml
+			!!! is how you specify the document type using haml. !!! 5 is a html5 doctype
+			add flash messages
+			%p
+			4. Add layouts/header
+			add placeholder text
+			%p
+			5. Add layouts/footer
+			add placeholder text
+			%p
+			6. Add pages: 'about' and 'contact'
+			%p
+			7. Add the routes
+			root :to => 'pages#home'
+			match '/contact', to: 'pages#contact'
+			match '/about', to: 'pages#about'
+			%p
+			8. Add links to home and about in header
+			link_to "Home", root_path
+			link_to "About", about_path
+			%p
+			9. Add link to contact in footer
+			link_to "Contact", contact_path
+			%p
+			Add Design: Bootstrap
+			%p
+			1. add gem 'bootstrap-sass' to the gemfile
+			bundle install
+			%p
+			2. add //=require bootstrap to 'app/assets/javascripts/application.js'
+			%p
+			3. change application.css to application.css.scss
+			%p
+			4. add bootstrap_and_overrides.css.scss for overriding bootstrap styling rules
+			import bootstrap and import bootstrap responsive
+			%p
+			5. Error: File to import not found or unreadable: bootstrap.
+			%p
+			6. Any time the application file is edited, or plugins are added, or changes are made to configuration, a server restart may be required for changes to be captured. Restart server.
+			%p
+			7. Add a Bootstrap navbar header
+			explain how to create ids and classes and how to hook them into CSS.
+			demonstrate the different bootstrap options to creating a cool header
+			%p
+			8. Add formatting for a footer
+			describe the edits made to CSS to format the footer
+			%p
+			Add Users: Devise What is authentication?
+			%p
+			1. https://github.com/plataformatec/devise
+			%p
+			2. add gem 'devise' to the gemfile
+			bundle install
+			%p
+			3. in the terminal $rails generate devise:install
+			%p
+			4. What does the 'generator' do? Explain that.
+			%p
+			5. the devise install gives us 5 instructions
+			9. edit your environment/development.rb file to include this line: 
+			config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+			Explain the config environments.
+			add this line to environment/production.rb file and change localhost:3000 to the domain name of your web app
+			root :to => "home#index" in the routes file which we've already done
+			add flash messages to application.html.haml which we've already done
+			edit config/application.rb to include the following line when pushing to heroku:
+			config.assets.initialize_on_precompile = false
+			customize devise views by running:
+			rails g devise:views
+			%p
+			6. in the terminal, generate a User model: $rails generate devise User
+			now in the terminal, to have the generation take effect, run: rake db:migrate. What is this for?
+			invoked active_record
+			created a migration. What is a migration? go to db/migrate to see the migration file
+			created a User model go to app/models/user.rb
+			created a few routes devise_for :users. What is a route?
+			in the terminal run: 'rake routes' or 'bundle exec rake routes'
+			%p
+			16. You need to restart your app server here for all our commands to take effect.
+			%p
+			8. One of the routes you've created, and you can see it when 'rake routes' is new_user_registration
+			Add this line to your home page at app/views/pages/home.html.haml:
+			%p
+			button_to "Sign Up", new_user_registration_path
+			See what happens if you change button_to to 'link_to'
+			Use bootstrap to make a fancier looking button
+			%p
+			11. Other routes are new_user_session and destroy_user_session which are synonymous to "login" and "logout"
+			Add the login and logout paths to the header based on whether the user is logged in or logged out
+			describe the method of fake it till you make it programming used to get the header right.
+			use placeholders like "test" before using actual links.
+			bootstrap .pull-right
+			placeholders for future navigation options
+			logout: %li= link_to "Logout", destroy_user_session_path, :method => :delete
+			login: %li= link_to "Login", new_user_session_path
+			if user_signed_in?
+			%p
+			10. rails generate devise views
+			allows you to customize user views
+			%p
+			11. rails generate migration AddNameToUsers name:string
+			show rails guides Google 'rails migration' and the first result you get is a Ruby on Rails Guide for everything migrations. There are guides for absolutely anything you might care to learn about Ruby on Rails. Open the link. Cmd+f or Cntrl+f and we are looking for generating a migration, so search 'rails generate migration' and you'll find the section of the guide about creating a standalone migration. If we already have a User model, we do not want to generate another entire model, but just migrate an edit to the model that already exists. That's what we want here. We have a User, but it is missing one attribute. A name. So we want to migrate one, simple, standalone, edit. And that is what a standalone migration is good for. The line to run is '$ rails generate migration AddNameToUser name:string'
+			check your db/migrate folder and you will see a new ruby file with a long string of numbers and a description of your migration, the change to the database that you just made.
+			explain generating migrations
+			make sure to run '$ rake db:migrate' or the change will not take place and you'll get an error saying 'NoMethodError' & 'undefined method 'name' for User'
+			add attr_accessible to the user model if you don't do this you will get an error that says "can't mass assign protected attributes." Rails needs to be told which of its model attributes are accessible to the user.
+			%p
+			%div
+			Add SimpleForm gem
+			1. https://github.com/plataformatec/simple_form
+			2. add gem 'simple_form' to the gem file and run bundle install and restart local server
+			3. run $ rails generate simple_form:install --bootstrap
+			%div
+			Add Notebooks model/controller/views
+			1. rails generate scaffold Notebooks title:string --skip-stylesheets and then rake db:migrate
+			2. the Rails Getting Started guide explains scaffold generation very well. Go to Google and search rails generate scaffold and look for the rubyonrails guides. Cmd+f and search "rails generate scaffold" and in that section you'll be explained everything you need to know about what generating a scaffold will do in your application. It actually creates most of the important parts required for a new model (Notebooks in our case) in just one line a migration to the database, a model, a controller, your routes are edited to include path information about Notebooks, and views associated with showing, creating, updating, and destroying notebooks. All of this can be done one step at a time, but why do that when you can do it all with one line! We don't need another css file, so we can skip that by adding --skip-stylesheets add the end of the command.
+			go to localhost:3000/notebooks. All the functionality is there for you to create a new notebook, edit it, show it, destroy it. It's all there, but how did it all get there with just the one line command that you ran?
+			Check out the cool new controller that was added for notebooks. app/controllers/notebook_controller.rb. Index, Show, New, Edit, Create, Update, and Destroy methods are all there. These are the standard CRUD methods. The actions that you would usually take on objects.
+			check out the associated views
+			Check out the routes.
+			3. THIS IS IMPORTANT Let's put all this together: Routes+ControllerMethods+Views for the model Notebook
+			4. Validation
+			add this to notebook.rb validates :title, presence: true
+			%div
+			Add Nested Model Notes model/controller/views
+			1. rails generate model Note content:text title:string author:string
+			2. Unlike the scaffold generator, this line does a lot less for us automatically, leaving us to create the views and controllers manually. As you can see in the terminal, it does create a model for us, and it creates a migration. So now we need to run '$ rake db:migrate' to add these changes to our database.
+			3. Add Notebook id and notebook reference to note resource
+			This is another standalone migration that we use to make a change to our original note model generation. We can do this if we forgot to add something that we need, or if we have to make a change to the notes table in the database. In this case, because notes kind of belong to notebooks, we need to add a reference id to our notes table. The reference id will basically say, "this note belongs to Notebook 1, and this note belongs to Notebook 5, and so forth."
+			Here is the migration to run: $ rails generate migration AddNotebookIdToNotes notebook_id:integer
+			of course, if I hadn't forgotten, I could have done both of these things in one step by running $ rails generate model Note content:text title:string author:string notebook_id:integer
+			After generating a migration, we have to actually migrate it to our database with the command: $ rake db:migrate
+			After running that command, go to db/schema.rb and you will see the line: t.integer  "notebook_id" under create_table "notes". In fact all the model/scaffold/migration generation that we have done can be seen in the schema.rb file.
+			4. Creating the association between Notebooks and Notes
+			What is the association? Notebooks have a bunch of notes, and every single Note belongs to a notebook
+			Model: add belongs_to and has_many to the note and notebook models to create the association
+			Routes: add resources :notes nested within resources :notebooks
+			5. generate the notes controller: $ rails generate controller Notes --skip-stylesheets
+			this adds controller, empty views folder, javascript file, and stylesheets. We don't need the js or the stylesheets
+			6. Add 2 methods in the notes controller: new, and create.
+			7. Add 1 view file in views/notes called new.html.haml. This will be the view where you can input the title and content for a new note. Put a placeholder in there like:
+			%p
+			New Note
+			8. Edit the Notebook show view to include a line that will take you to the note new view: 
+			%p
+			link_to 'New Note', new_notebook_note_path(@notebook)
+			> in the terminal, run rake routes and look for the notes#new route. Notice that it is named new_notebook_note. If you append _path to this, you can use it in your view file to tell the link where to take you. Additionally, since note is a nested model that belongs to a specific Notebook, you have to tell the path which notebook it should add a new note to. That's why @notebook, which is defined in your notes controller, is added as a variable to the new_notebook_note_path
+			9. Let's go back to the notes controller. 
+			The new method is required for you to be able to click 'new note' in your view. This method figures out which notebook is getting a new note.
+			The create method is required for you to be able to click 'create note' after filling the input fields. 
+			You currently respond with html, but you may later respond with javascript or something so that's what the respond_to and respond_with lines do. Don't worry about that too much
+			If you don't include this line: flash[:notice] = 'Note was successfully created.' if @note.save, the note doesn't get saved and you won't be able to see it after creating it.
+			In the create method there is also a :location attribute which tells the site where to take someone after they click 'create note'. Where would we want to go?
+			We probably want to go back to the notebook page where we can see all the notes. We can call that path notebook_path which we can see from running 'rake routes'. We also need to know which notebook to show, so @notebook is passed as an attribute to the notebook_path. It's safe and easy to test out what goes wrong if you do something incorrectly. Try it out. Remove the @notebook parameter in your respond_with line in the create method. Now try refreshing the site on your localhost. What error do you get?
+			10. Finally, lets add the views so you can see what you've done.
+			In views/notes new.html.haml add simple_form_for[@notebook, @note] do |f| // f.input :title, f.input :content, f.button :submit
+			Now create a new test note!
+			11. Now we can create a new note and after we do, we go back to the notebook show page. But we should also be able to see the new note we created. So lets create a note show view.
+			create a new file in views/notes/ show.html.haml and put a placeholder in it so we know if we can access it. Fake it till you make it.
+			I put 'Show Note View'
+			now lets turn the Note Title in the notebook show view into a link that leads us to the Note show view.
+			link_to ff.title, notebook_note_path(@notebook, ff) // that is what I used. I got the notebook_note_path from rake routes again. If you think about it, a note show path will require 2 pieces of information. What Notebook should I look in? What note am I looking for? That's why there are 2 variables passed here. The @notebook that is defined in the Notes Controller show method, and ff, which is created by the loop that loops through all the notes inside a notebook.
+			To get an idea of how the controllers and views are related, lets add what we want to see to the notes show view without adding the show method to the notes controller.
+			I want to see the Title: @note.title
+			I want to see the Content: @note.content
+			Now click on the linked title of your test note in your notebook show view! What error did you get? I got a NoMethodError in Notes#show, undefined method 'title' for nil:NilClass.
+			The Notes Controller needs to be able to show a note. So lets add a show method.
+			you need to define @notebook and @note
+			@notebook = Notebook.find(params[:notebook_id])
+			@note = @notebook.notes.find(params[:id])
+			Now if you click the linked title of your test note, you'll see the note show view with the title and content.
+			%div
+			Explain Options
+			1. A blog requires an admin. Members will be able to comment.
+			2. A blogging application or platform like Twitter allows all members to create notes. 
+			3. My application will allow only me to create notebooks, but it will allow any member to create notes and comments. I could also choose to allow members to only make comments and not create notes, or I could choose to allow members to create notes only in certain notebooks. I'll discuss how to implement these different options here, and then I will show you how to implement the option that I am choosing.
+			4. rails generate migration AddAdminToUsers admin:boolean
+			4. Edit the migration file to include default:false so that the admin attribute defaults to false.
+			5. Either seed the data with db/seeds.rb or create it using the rails console.
+			6. User.create(name: 'Kaustubh Bhardwaj', email: 'kaustubh.bhardwaj86@gmail.com', password: 'xxxxx', password_confirmation: 'xxxxx')
+			7. Can't mass-assign protected attributes
+			8. rake db:seed
+			9. $ rails console
+			10. > User.first %- will give you the seeded user that you created in the seed file. Notice that the admin attribute is set to false.
+			11. > User.first.toggle!(:admin) %- this will toggle the admin attribute to true
+			12. > User.first %- notice now that the admin attribute is set to true. You just made your first user an admin.
+			13. type > exit %- to exit the rails console.
+			%div
+			Add User abilities: CanCan
+			1. add gem "cancan" to the gemfile and $ bundle install
+			2. We have an admin that we created manually earlier. Now we need to be able to define abilities. That is what CanCan will do for us.
+			3. We need an ability class
+			$ rails generate cancan:ability
+			as you can see in the terminal and in app/models, there is now an ability.rb model that was created. This is where you can define the abilities of all the different types of users of your app admins, members, guests, etc.
+			4. Lets start with the basics and we can keep adding more detail. The admin should be able to do anything in my application, since I am creating somewhat of a blog. In some other applications like Twitter or Facebook for example, there is not an admin who can go around doing anything he or she wants. People would not be too happy about that. But in my little application, I want control. In case people spam my blog or say mean things to me. The casual non-member who comes across my application should be able to read all the notes and all the comments, but should not be able to create any notes and comments. The logged in member of my site will be able to read all notes and comments, will be able to make comments on all notes, and will be able to create notes in some designated places. Lets start somewhere. We'll figure out the admin and the non-member because those are easy.
+			if user.admin? can :manage, :all
+			else can :read, :all
+			There we go.
+			5. Now go add a line in the notebook index view that will allow a user to add a new notebook only if they have the authority to do it.
+			if can? :create, Notebook
+			link_to 'New Notebook', new_notebook_path
+			6. Now see what happens when you visit localhost:3000/notebooks when you're logged in.
+			7. Now see what happens when you visit localhost:3000/notebooks when you're logged out.
+			8. But notice, even when you're logged out, you can still manually enter the url localhost:3000/notebooks/new and access the new notebook view. To keep a non-member from doing this we need to make a change in the notebooks controller. 
+			9. Add the line load_nd_authorize_resource in the notebooks controller. Make it the first line within class NotebooksController < ApplicationController
+			This line will consult the ability class to determine what actions can be taken on notebooks by the user.
+			Now try to go to localhost:3000/notebooks/new and see what happens. We need to make this prettier somehow, but it does the job.
+			%div
+			Add Design
+			1. Google Twitter Bootstrap
+			2. Look through the various components
+			3. http://twitter.github.io/bootstrap/components.html#thumbnails This is what we'll use to make our notebooks feel more like real notebooks than just a list on screen.
+			4. icon fonts fontello
+			download font and customize css and codes
+			require css files
+			hook using class name
+			5. Layout the notes index / notebook show view
+			6. Google how to get the first 20 words in a string using Ruby put the method in application_helper and use it in the view
+			%div
+			What's missing
+			1. Add the ability to update notes. This was missing.
+			2. Add formatting to the content using the simple_format helper. In notes show view
+			3. Add the recognition of urls and the conversion to links with the rails_autolink gem
+			https://github.com/tenderlove/rails_autolink
+			gem "rails_autolink"
+			require 'rails_autolink' in the notes show view
+			add the auto_link helper to the content value, and add target => blank to make the link open up in a new window
+			%div
+			Re-visiting Abilities
+			1. Types of users: admin, members, authors, non-members
+			2. Objects: Notebooks, notes, comments
+			2. Write down all the rules you can think of.
+			Only the admin can create or update notebooks
+			Notebooks can be open, closed, or invite-only
+			Members can add notes to open Notebooks
+			Members and non-members can read everything
+			Authors can edit their own notes
+			3. load_and_authorize_resource for Notebooks and nested notes in the controller. Explain these lines and how they affect ability.rb
+			4. Explain the lines in ability.rb and what they do. Provide links to the 'defining abilities' and 'checking abilities' github
+			%div
+			Adding Nested Resource Comments model/views/controller
+			1. rails generate model Comment content:text note_id:integer user_id:integer
+			2. Unlike the scaffold generator, this line does a lot less for us automatically, leaving us to create the views and controllers manually. As you can see in the terminal, it does create a model for us, and it creates a migration. So now we need to run '$ rake db:migrate' to add these changes to our database.
+			3. Add Notebook id and notebook reference to note resource
+			This is another standalone migration that we use to make a change to our original note model generation. We can do this if we forgot to add something that we need, or if we have to make a change to the notes table in the database. In this case, because notes kind of belong to notebooks, we need to add a reference id to our notes table. The reference id will basically say, "this note belongs to Notebook 1, and this note belongs to Notebook 5, and so forth."
+			Here is the migration to run: $ rails generate migration AddNotebookIdToNotes notebook_id:integer
+			of course, if I hadn't forgotten, I could have done both of these things in one step by running $ rails generate model Note content:text title:string author:string notebook_id:integer
+			After generating a migration, we have to actually migrate it to our database with the command: $ rake db:migrate
+			After running that command, go to db/schema.rb and you will see the line: t.integer  "notebook_id" under create_table "notes". In fact all the model/scaffold/migration generation that we have done can be seen in the schema.rb file.
+			4. Creating the association between Notes and Comments
+			What is the association? Notes have a bunch of comments, and every single Comment belongs to a note
+			Model: add belongs_to and has_many to the note and comment models to create the association
+			Routes: add resources :notes nested within resources :notebooks
+			describe the 3 levels nesting and what the shallow => true does.
+			Also create the association between user and comment. Comments belong to users as well as to notes.
+			5. Create a new file in the controllers folder called comments_controller.rb. We don't need all the different views and stylesheets and js stuff for this model.
+			6. Add 2 methods in the comments_controller: create, and destroy.
+
+			7. Add 1 view file in views/notes called new.html.haml. This will be the view where you can input the title and content for a new note. Put a placeholder in there like:
+			%p
+			New Note
+			8. Edit the Notebook show view to include a line that will take you to the note new view: 
+			%p
+			link_to 'New Note', new_notebook_note_path(@notebook)
+			> in the terminal, run rake routes and look for the notes#new route. Notice that it is named new_notebook_note. If you append _path to this, you can use it in your view file to tell the link where to take you. Additionally, since note is a nested model that belongs to a specific Notebook, you have to tell the path which notebook it should add a new note to. That's why @notebook, which is defined in your notes controller, is added as a variable to the new_notebook_note_path
+			9. Let's go back to the notes controller. 
+			The new method is required for you to be able to click 'new note' in your view. This method figures out which notebook is getting a new note.
+			The create method is required for you to be able to click 'create note' after filling the input fields. 
+			You currently respond with html, but you may later respond with javascript or something so that's what the respond_to and respond_with lines do. Don't worry about that too much
+			If you don't include this line: flash[:notice] = 'Note was successfully created.' if @note.save, the note doesn't get saved and you won't be able to see it after creating it.
+			In the create method there is also a :location attribute which tells the site where to take someone after they click 'create note'. Where would we want to go?
+			We probably want to go back to the notebook page where we can see all the notes. We can call that path notebook_path which we can see from running 'rake routes'. We also need to know which notebook to show, so @notebook is passed as an attribute to the notebook_path. It's safe and easy to test out what goes wrong if you do something incorrectly. Try it out. Remove the @notebook parameter in your respond_with line in the create method. Now try refreshing the site on your localhost. What error do you get?
+			10. Finally, lets add the views so you can see what you've done.
+			In views/notes new.html.haml add simple_form_for[@notebook, @note] do |f| // f.input :title, f.input :content, f.button :submit
+			Now create a new test note!
+			11. Now we can create a new note and after we do, we go back to the notebook show page. But we should also be able to see the new note we created. So lets create a note show view.
+			create a new file in views/notes/ show.html.haml and put a placeholder in it so we know if we can access it. Fake it till you make it.
+			I put 'Show Note View'
+			now lets turn the Note Title in the notebook show view into a link that leads us to the Note show view.
+			link_to ff.title, notebook_note_path(@notebook, ff) // that is what I used. I got the notebook_note_path from rake routes again. If you think about it, a note show path will require 2 pieces of information. What Notebook should I look in? What note am I looking for? That's why there are 2 variables passed here. The @notebook that is defined in the Notes Controller show method, and ff, which is created by the loop that loops through all the notes inside a notebook.
+			To get an idea of how the controllers and views are related, lets add what we want to see to the notes show view without adding the show method to the notes controller.
+			I want to see the Title: @note.title
+			I want to see the Content: @note.content
+			Now click on the linked title of your test note in your notebook show view! What error did you get? I got a NoMethodError in Notes#show, undefined method 'title' for nil:NilClass.
+			The Notes Controller needs to be able to show a note. So lets add a show method.
+			you need to define @notebook and @note
+			@notebook = Notebook.find(params[:notebook_id])
+			@note = @notebook.notes.find(params[:id])
+			Now if you click the linked title of your test note, you'll see the note show view with the title and content.
+			%div
+			Cleaning Up:
+			Put notes in reverse order
+			Put comments in reverse order
+			Abilities: define abilities for comments. User must be signed in to leave a comment. A user can destroy his/her own comment.
+			%div
+			Add Responsiveness
+			Add js files to application.html.haml head
+			change the line in production.rb, setting assets compile to true: http://stackoverflow.com/questions/7275636/rails-3-1-0-actionviewtemplateerrror-application-css-isnt-precompiled
+			Add this line to application.html.haml head as well: %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+			follow the appropriate directions to change the class structure for the _header file in order to make it collapsible.
+			Add Testing and Administration: sferik/rails_admin
+			Add Faker gem
+			Add Errors: Sentry
+			Add Analytics: Segment.io
 			
 
-- else 
+-else 
 	%div{:style=>"text-align:center"}
 		%div{:style=>"text-align:center", :class=>"paragraph"}
 			Sign in to get access to this guide.
