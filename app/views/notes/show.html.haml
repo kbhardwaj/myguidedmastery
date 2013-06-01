@@ -11,8 +11,11 @@
 		= link_to "down", vote_notebook_note_path(@notebook, @note, type: "down"), method: "post"
 %p
 
-%div.paragraph= auto_link(simple_format(@note.content), :html => { :target => '_blank' })
-%div.paragraph= raw youtube_embed(@note.content)
+%div.paragraph
+	= auto_link(simple_format(@note.content), :html => { :target => '_blank' })
+	
+	= raw youtube_embed(@note.content)
+	
 
 %p
 %div.navlinks
