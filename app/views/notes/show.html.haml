@@ -12,6 +12,7 @@
 %p
 
 %div.paragraph= auto_link(simple_format(@note.content), :html => { :target => '_blank' })
+%div.paragraph= raw youtube_embed(@note.content)
 
 %p
 %div.navlinks
