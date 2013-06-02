@@ -17,4 +17,12 @@ module ApplicationHelper
 	  	%Q{<div class="video-container"><iframe title="YouTube video player" width="100%" height="100%" position="absolute" color="white" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe></div>}
 	  end
 	end
+
+	def linked(url)
+	  if url[/^.+\/[\w:]+\.(jpe?g|png|gif)/i]
+	    "<img src='#{url}' />"
+	  else
+	    "<a href='#{url}'>#{url}</a>"
+	  end
+	end
 end
