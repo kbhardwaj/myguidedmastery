@@ -1,13 +1,19 @@
-%p#notice= notice
 
-%p
-	%b Title:
-	= @notebook.title
-%p
-= @notebook.access
+%div.row
+	%div.span2{:style=>"float:left"}
+		%p.paratitle
+			
+			= @notebook.title
+	%div.span4.offset4
+		- if user_signed_in?
+			- if @notebook.user_id == current_user.id
+				= render 'invites/form' 
 
-%p
-	%b Notes:
+
+
+%div
+	%p
+	
 	- @notes.reverse.each do |ff|
 		%hr
 		%div.row

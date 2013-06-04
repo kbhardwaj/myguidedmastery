@@ -7,6 +7,7 @@ class Ability
         #user ||= User.new # guest user (not logged in)
         unless user
             can :read, :all
+            cannot :read, Notebook, :access => "invite-only"
         else
             can :read, :all
             can :create, Comment
@@ -16,6 +17,10 @@ class Ability
             can :destroy, Note, :user_id => user.id
             can :create, Note, :notebook => {:access => "open"} #If the notebook is 'open', any signed in user can add a note to it.
             can :vote, Note
+            can :create, Notebook
+            cannot :read, Notebook, :access => "invite-only"
+            can :read, Notebook, :user_id => user.id
+            can :read, Notebook, :invites => {:email => user.email}
             # can :create, :notes do |note|
             #     note.notebook.access == 'open'
             # end

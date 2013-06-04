@@ -3,13 +3,18 @@ class NotebooksController < ApplicationController
   # GET /notebooks
   # GET /notebooks.json
   def index
-    @notebooks = Notebook.all
-
+    
+    if params[:notebooks]
+      @notebooks =Notebook.find_all_by_user_id(current_user.id)
+    else
+      @notebooks = Notebook.all
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @notebooks }
     end
   end
+
 
   # GET /notebooks/1
   # GET /notebooks/1.json
@@ -48,7 +53,7 @@ class NotebooksController < ApplicationController
   # POST /notebooks.json
   def create
     @notebook = Notebook.new(params[:notebook])
-
+    @notebook.user_id = current_user.id
     respond_to do |format|
       if @notebook.save
         format.html { redirect_to @notebook, notice: 'Notebook was successfully created.' }

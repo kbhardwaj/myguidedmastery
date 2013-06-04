@@ -1,0 +1,8 @@
+= simple_form_for [@notebook, @notebook.invites.build] do |f|
+  
+
+  %div{:style=>"float:left; text-align:right"}
+    = f.input :email, :input_html => {:rows=>1,:class=>"span3",:placeholder=>"grant access by email address"}, label: false
+
+  
+  = f.button :submit, "Invite"

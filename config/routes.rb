@@ -1,4 +1,7 @@
 Myguidedmastery::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   resources :notebooks do
     get '/tags/:tag' => 'notebooks#show', :as => :tag
     resources :notes do
@@ -6,9 +9,13 @@ Myguidedmastery::Application.routes.draw do
       resources :comments
     end
   end
-   #makes a single route that takes a :tag argument and maps to notebooks show page
+  
+  resources :notebooks do
+    resources :invites
+  end
 
   devise_for :users
+  ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

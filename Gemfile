@@ -48,3 +48,4 @@ gem "cancan"
 gem "rails_autolink"
 gem 'activerecord-reputation-system', require: 'reputation_system'
 gem "acts-as-taggable-on"
+gem "activeadmin"
