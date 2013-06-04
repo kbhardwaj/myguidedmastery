@@ -24,11 +24,11 @@
 			
 				
 	
-			- if can? :edit, Notebook
-				%div{:style=>"text-align:center"}
-					= link_to 'Edit', edit_notebook_path(notebook)
-					\|
-					= link_to 'Destroy', notebook, :method => :delete, :data => { :confirm => 'Are you sure?' }
+				- if can? :edit, Notebook
+					%div{:style=>"text-align:center"}
+						= link_to 'Edit', edit_notebook_path(notebook)
+						\|
+						= link_to 'Destroy', notebook, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 
 %br
