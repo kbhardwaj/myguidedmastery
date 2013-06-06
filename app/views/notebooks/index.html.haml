@@ -10,7 +10,14 @@
 
 
 %hr
-
+%div{:style=>"position:relative; top:-10px"}
+	- if !user_signed_in?
+		= link_to "Sign in", new_user_session_path 
+		or 
+		= link_to "Sign up", new_user_registration_path 
+		to add a notebook.
+	- if can? :create, Notebook
+		= link_to '+ New Notebook', new_notebook_path
 
 
 %ul.thumbnails
@@ -33,6 +40,6 @@
 
 %br
 - if can? :create, Notebook
-	= link_to 'New Notebook', new_notebook_path
+	= link_to '+ New Notebook', new_notebook_path
 
 
