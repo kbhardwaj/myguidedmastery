@@ -4,12 +4,11 @@ Hi Friend,
 You've been invited to check out my notebook, "#{ @notebook.title}" on the My Guided Mastery website. The point of this site is to share resources and ideas that we find useful so that we can curate all that info into these concise notebooks. It's great for using the interent to learn new things and for turning ideas into actionable movements. So definitely feel free to post notes and leave comments here. 
 %p
 Check it out -  
-
+#{link_to 'Sign in', new_user_session_path}	to view this notebook -
 #{link_to @notebook.title, notebook_url(@notebook)}
-%p
-- if !user_signed_in?
 
-	#{link_to 'Sign in', new_user_session_path}	to view this notebook.
+
+	
 
 %p
 \- #{@sender.name}
