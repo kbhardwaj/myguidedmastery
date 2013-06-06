@@ -6,7 +6,7 @@ class UserMailer < ActionMailer::Base
   	@notebook = notebook
   	@sender = sender
   	
-  	mail(:to => "#{@email}", :subject => "My Guided Mastery: I've invited you to check out my notebook", :from => "#{@sender.email}")
+  	mail(:to => "#{@email}", :subject => "My Guided Mastery: #{@sender.name} has invited you to check out this new notebook", :from => "#{@sender.email}")
   end
 
   def invite_guest(email,name,event)
