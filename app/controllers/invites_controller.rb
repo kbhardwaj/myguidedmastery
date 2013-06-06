@@ -9,7 +9,7 @@ respond_to :html, :xml, :json
 		@invite = Invite.new(params[:invite])
 		@invite.notebook_id = @notebook.id
 		@invite.save
-		UserMailer.send_invite(@invite.email, @notebook.title, current_user ).deliver
+		UserMailer.send_invite(@invite.email, @notebook, current_user ).deliver
 		respond_with(@notebook, @invite, :location => notebook_path(@notebook))
 	end
 
