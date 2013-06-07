@@ -6,6 +6,8 @@ class NotebooksController < ApplicationController
     
     if params[:notebooks]
       @notebooks =Notebook.find_all_by_user_id(current_user.id)
+    elsif params[:priv]
+      @notebooks = Notebook.where(:access=>"invite-only")
     else
       @notebooks = Notebook.all
     end

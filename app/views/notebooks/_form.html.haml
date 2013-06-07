@@ -3,9 +3,14 @@
 
   .form-inputs
     = f.input :title
-
+  %hr
+  %p Membership:  
+  %p Pro Membership: for $4/month you can create notebooks of any access type. Create notebooks that are open for the public to see, collaborate and collect feedback from anyone, and promote your notes in any public forums. In the near future you will also be able to create custom urls. 
+  %p Free Membership: tier allows you to create invite-only notebooks to which you can invite collaborators by email.
+  %hr
   .form-inputs
-    = f.input :access, :collection => [['open', 'Open: Everyone can read and add notes to this notebook'], ['closed', 'Closed: Everyone can read this notebook, only you can add notes'], ['invite-only', 'Invite-Only: Only those you invite will have access to this notebook']], :label_method=>:last, :value_method=>:first, :as=>:radio
+    - if can? :create, Notebook, :access=>"open"
+      = f.input :access, :collection => [['invite-only', 'Invite-Only: Only those you invite will have access to this notebook'], ['open', 'Open: Everyone can read and add notes to this notebook'], ['closed', 'Closed: Everyone can read this notebook, only you can add notes']], :label_method=>:last, :value_method=>:first, :as=>:radio
 
   .form-actions
     = f.button :submit

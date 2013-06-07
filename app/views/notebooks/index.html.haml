@@ -6,8 +6,8 @@
 		- if user_signed_in?
 			%li= link_to 'My Notebooks', notebooks_path(notebooks: current_user.id)
 			%li= link_to "All", notebooks_path
+			%li= link_to "Private Notebooks", notebooks_path(priv: 'yes')
 	
-
 
 %hr
 %div{:style=>"position:relative; top:-10px"}
@@ -23,19 +23,33 @@
 %ul.thumbnails
 	- @notebooks.each do |notebook|
 		- if can? :read, notebook
-			%li.span2
-				%a.thumbnail{:href=> notebook_path(notebook), :style=>"background-color:lightblue"}
-					%div{:style=>"text-align:center; color:#BB3825"}= notebook.title
-					%i{:class=>"icon-book-1", :style=>"font-size:120px; text-align:center"}
+			%li
+				- if notebook.access == "open" || notebook.user_id == current_user.id || notebook.invites.any?{|i| i.email == current_user.email} # if access is open, if I own the notebook, or if I have been invited to the notebook
+					%a.thumbnail{:href=> notebook_path(notebook), :style=>"background-color:lightblue; width:250px;"}
+						%div{:style=>"text-align:center; color:#BB3825"}
+							= notebook.title
+						%i{:class=>"icon-book-1", :style=>"font-size:100px; text-align:center; margin-top:5px;"}
+						%div{:style=>"margin-top:85px;"}
+							= notebook.user.name
+							= notebook.access
+					- if can? :edit, notebook
+						
+								
+						%div{:style=>"position:relative; top:-20px; left:165px; width:95px; line-height:0px"}
+							= link_to 'Edit', edit_notebook_path(notebook)
+							\|
+							= link_to 'Destroy', notebook, :method => :delete, :data => { :confirm => 'Are you sure?' }
+				- else
+					%a.thumbnail{:href=> notebook_path(notebook), :style=>"background-color:lightblue; width:250px;"}
+						%div{:style=>"text-align:center; color:#BB3825"}= notebook.title
+						%i{:class=>"icon-book-1", :style=>"font-size:100px; color:maroon; margin-top:5px; "}
+						%p{:style=>"margin-top:85px"}= notebook.user.name
+
 		
 			
 				
 	
-				- if can? :edit, Notebook
-					%div{:style=>"text-align:center"}
-						= link_to 'Edit', edit_notebook_path(notebook)
-						\|
-						= link_to 'Destroy', notebook, :method => :delete, :data => { :confirm => 'Are you sure?' }
+				
 
 
 %br

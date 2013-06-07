@@ -49,3 +49,4 @@ gem "rails_autolink"
 gem 'activerecord-reputation-system', require: 'reputation_system'
 gem "acts-as-taggable-on"
 gem "activeadmin", :git => 'https://github.com/gregbell/active_admin.git'
+gem "stripe"

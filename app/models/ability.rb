@@ -17,10 +17,13 @@ class Ability
             can :destroy, Note, :user_id => user.id
             can :create, Note, :notebook => {:access => "open"} #If the notebook is 'open', any signed in user can add a note to it.
             can :vote, Note
-            can :create, Notebook
+            can :update, Notebook, :user_id => user.id
+            can :create, Notebook, :access => "invite-only"
             cannot :read, Notebook, :access => "invite-only"
             can :read, Notebook, :user_id => user.id
             can :read, Notebook, :invites => {:email => user.email}
+            
+            can :destroy, Notebook, :user_id => user.id
             # can :create, :notes do |note|
             #     note.notebook.access == 'open'
             # end
